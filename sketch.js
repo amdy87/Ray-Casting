@@ -51,19 +51,18 @@ function draw() {
     wall.show();
   }
 
-  // let x = mouseX;
-  // let y = mouseY;
-  // if(x > width-commandTabSize) x = width-commandTabSize;
-  // if(x < 0) x = 0;
-  // if(y > height) y = height;
-  // if(y < 0) y = 0;
-  // particle.update(x,y);
+  let x = mouseX;
+  let y = mouseY;
+  if (x > width - commandTabSize) x = width - commandTabSize;
+  if (x < 0) x = 0;
+  if (y > height) y = height;
+  if (y < 0) y = 0;
+  particle.update(x, y);
 
-  particle.update(noise(xoff) * (width - commandTabSize), noise(yoff) * height);
+  //particle.update(noise(xoff) * (width - commandTabSize), noise(yoff) * height);
+  // xoff += 0.0025;
+  // yoff += 0.0025;
 
   particle.show();
   particle.look(walls);
-
-  xoff += 0.0025;
-  yoff += 0.0025;
 }
