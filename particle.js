@@ -2,7 +2,7 @@ class Particle {
   constructor() {
     this.pos = createVector(width / 2, height / 2);
     this.rays = [];
-    for (let a = 0; a < 360; a += 0.5) {
+    for (let a = 0; a < 360; a += 1) {
       this.rays.push(new Ray(this.pos, radians(a)));
     }
   }
